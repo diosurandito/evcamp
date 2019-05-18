@@ -22,11 +22,15 @@
 
   <div class="login-box-body">
     <p class="login-box-msg">Login untuk menggunakan aplikasi</p>
-
-    <form action="" method="post">
-    
+    @if(Session::has('message'))
+   <div class="alert alert-warning alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-info"></i> Email belum di verifikasi</h4>
+          {{Session::get('message')}}
+      </div>
+      @endif
+    <form action="{{route('organizer.login')}}" method="post">
     @csrf
-
       <div class="form-group has-feedback">
         <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

@@ -1,80 +1,139 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ config('app.locale') }}">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EVCAMP</title>
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  
+  <link rel="stylesheet" href="{{ asset('public/adminLTE/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('public/font-awesome/css/font-awesome.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('public/adminLTE/dist/css/AdminLTE.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('public/adminLTE/dist/css/skins/skin-blue.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('public/adminLTE/plugins/datatables/dataTables.bootstrap.css') }}">
+  <link rel="stylesheet" href="{{ asset('public/adminLTE/plugins/datepicker/datepicker3.css') }}">
 </head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+   <!-- Header -->
+  <header class="main-header">
 
-                    </ul>
+    <a href="#" class="logo">
+      <span class="logo-mini"><b>EC</b></span>
+     <span class="logo-lg"><b>EVCAMP</b></span>
+    </a>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+    <nav class="navbar navbar-static-top" role="navigation">
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="{{ asset('public/images/'.Auth::user()->foto) }}" class="user-image" alt="User Image">
+                <span class="hidden-xs">{{ Auth::user()->name }}</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="user-header">
+                    <img src="{{ asset('public/images/'.Auth::user()->foto) }}" class="img-circle" alt="User Image">
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                    <p>
+                      {{ Auth::user()->name }}
+                    </p>
+                </li>
+                <li class="user-footer">
+                    <div class="pull-left">
+                        <a class="btn btn-default btn-flat" href="{{ route('user.profil') }}">Edit Profil</a>
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-flat" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Logout
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </div>
+                </li>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+
+  <!-- Sidebar -->
+  <aside class="main-sidebar">
+
+    <section class="sidebar">
+      <ul class="sidebar-menu">
+        <li class="header">MENU NAVIGASI</li>
+
+        
+
+      @if( Auth::user()->level == 1 )
+        <li><a href="{{ route('home') }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <!-- <li><a href="{{ route('kategori.index') }}"><i class="fa fa-cube"></i> <span>Kategori</span></a></li>
+        <li><a href="{{ route('produk.index') }}"><i class="fa fa-cubes"></i> <span>Produk</span></a></li> -->
+        <li><a href="#"><i class="fa fa-bell"></i> <span>Konfirmasi Pemesanan</span></a></li>
+        <li><a href="{{ route('event.index') }}"><i class="fa fa-ticket"></i> <span>Data Event</span></a></li>
+        <li><a href="{{ route('member.index') }}"><i class="fa fa-user"></i> <span>Data User</span></a></li>
+        <li><a href="{{ route('penyelenggara.index') }}"><i class="fa fa-user-circle-o"></i> <span>Data Penyelenggara</span></a></li>
+        
+      @else
+        <li><a href="#"><i class="fa fa-home"></i> <span>Home</span></a></li>
+        <li><a href="#"><i class="fa fa-cart-plus"></i> <span>Event Saya</span></a></li>
+      @endif
+      </ul>
+    </section>
+  </aside>
+  <!-- End Sidebar -->
+
+  <!-- Content  -->
+  <div class="content-wrapper">
+   <section class="content-header">
+      <h1>
+        @yield('title')
+      </h1>
+      <ol class="breadcrumb">
+        @section('breadcrumb')
+        <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+        @show
+      </ol>
+    </section>
+
+    <section class="content">
+        @yield('content')
+    </section>
+  </div>
+  <!-- End Content -->
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      EVCAMP 2019
     </div>
+    <strong>Copyright &copy; 2019 <a href="#">EVCAMP</a>.</strong> All rights reserved.
+  </footer>
+  <!-- End Footer -->
+ 
+<script src="{{ asset('public/adminLTE/plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
+<script src="{{ asset('public/adminLTE/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('public/adminLTE/dist/js/app.min.js') }}"></script>
+
+<script src="{{ asset('public/adminLTE/plugins/chartjs/Chart.min.js') }}"></script>
+<script src="{{ asset('public/adminLTE/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('public/adminLTE/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+<script src="{{ asset('public/adminLTE/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
+<script src="{{ asset('public/js/validator.min.js') }}"></script>
+
+@yield('script')
+
 </body>
 </html>
