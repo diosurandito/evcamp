@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('public/lp/img/apple-icon.png') }}">
-  <link rel="icon" type="image/png" href="{{ asset('public/lp/img/favicon.png') }}">
+  <link rel="icon" sizes="32x32" href="{{ asset('public/assets/media/favicons/logobdwGD.png') }}">
   <title>
     EVCAMP
   </title>
@@ -25,8 +25,10 @@
   <nav class="navbar navbar-expand-lg fixed-top navbar-transparent " color-on-scroll="100">
     <div class="container">
       <div class="navbar-translate">
+        
         <a class="text-white" rel="tooltip" title="Buat dan Olah Event Kampusmu Sendiri" data-placement="bottom" target="_blank" style="font: bold;">
-          <span>EVCAMP</span>
+        
+          <span style="font-size: 16px;"><img src="{{ asset('public/assets/media/favicons/logobdwGD.png') }}" style="width: 27px;"> EVCAMP</span>
         </a>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-bar bar1"></span>
@@ -82,8 +84,8 @@
             </h1>
             <p class="text-white mb-3">EVCAMP adalah aplikasi pemesanan tiket event kampus yang menyediakan layanan publikasi dan pengelolaan tiket untuk event kampus melalui website dan layanan pemesanan tiket melalui aplikasi mobile android.</p>
             <div class="btn-wrapper mb-3">
-              <p class="category text-success d-inline">Unduh aplikasi mobile EVCAMP disini</p>
-              <a href="#blk" class="btn btn-success btn-link btn-sm"><i class="tim-icons icon-minimal-right"></i></a>
+              <a href="http://www.mediafire.com/file/ziwld814elv656i/evcampapps.apk/file" target="_blank" class="category text-success d-inline">Unduh aplikasi mobile EVCAMP disini</a>
+              <a href="http://www.mediafire.com/file/ziwld814elv656i/evcampapps.apk/file" target="_blank"><i class="tim-icons icon-minimal-right"></i></a>
             </div>
             <div class="btn-wrapper">
               <div class="button-container">
@@ -109,16 +111,16 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-12">
-            <h1 class="text-center">Your best benefit</h1>
+            <h1 class="text-center">Keuntungan Terbaik Yang Anda Dapat</h1>
             <div class="row row-grid justify-content-center">
               <div class="col-lg-3">
                 <div class="info">
                   <div class="icon icon-primary">
                     <i class="tim-icons icon-money-coins"></i>
                   </div>
-                  <h4 class="info-title">Low Commission</h4>
+                  <h4 class="info-title">Komisi Rendah</h4>
                   <hr class="line-primary">
-                  <p>Divide details about your work into parts. Write a few lines about each one. A paragraph describing a feature will.</p>
+                  <p>EVCAMP hanya mengambil 5% dari hasil penjualan tiket event Anda tanpa ada lagi potongan komisi lain.</p>
                 </div>
               </div>
               <div class="col-lg-3">
@@ -126,9 +128,9 @@
                   <div class="icon icon-warning">
                     <i class="tim-icons icon-chart-pie-36"></i>
                   </div>
-                  <h4 class="info-title">High Incomes</h4>
+                  <h4 class="info-title">Kemudahan Publikasi</h4>
                   <hr class="line-warning">
-                  <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing feature will be a feature. </p>
+                  <p>Publikasi Event Kampus menjadi lebih mudah dan cepat tersebar pada masyarakat luas. </p>
                 </div>
               </div>
               <div class="col-lg-3">
@@ -136,9 +138,9 @@
                   <div class="icon icon-success">
                     <i class="tim-icons icon-single-02"></i>
                   </div>
-                  <h4 class="info-title">Verified People</h4>
+                  <h4 class="info-title">Mudah Kelola Penjualan</h4>
                   <hr class="line-success">
-                  <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing be enough.</p>
+                  <p>Pengelolaan penjualan tiket event menjadi lebih mudah.</p>
                 </div>
               </div>
             </div>
@@ -157,7 +159,7 @@
                 <div class="justify-content-center">
                   <div class="numbers">
                     <p class="card-title">100%</p>
-                    <p class="card-category text-white">Safe</p>
+                    <p class="card-category text-white">Aman</p>
                   </div>
                 </div>
               </div>
@@ -166,8 +168,8 @@
               <div class="card-body">
                 <div class="justify-content-center">
                   <div class="numbers">
-                    <p class="card-title">573 K</p>
-                    <p class="card-category text-white">Satisfied customers</p>
+                    <p class="card-title">10 K</p>
+                    <p class="card-category text-white">Pengguna</p>
                   </div>
                 </div>
               </div>
@@ -176,8 +178,8 @@
               <div class="card-body">
                 <div class="justify-content-center">
                   <div class="numbers">
-                    <p class="card-title">10 425</p>
-                    <p class="card-category text-white">Business</p>
+                    <p class="card-title">1015</p>
+                    <p class="card-category text-white">Event Kampus</p>
                   </div>
                 </div>
               </div>
@@ -186,8 +188,8 @@
           <div class="col-md-6">
             <div class="px-md-5">
               <hr class="line-success">
-              <h3>Awesome features</h3>
-              <p>The design system comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+              <h3>Fitur Luar Biasa</h3>
+              <p>EVCAMP menyediakan beberapa fitur luar biasa demi kenyamanan penyelenggara event dan pengunjung event.</p>
               <ul class="list-unstyled mt-5">
                 <li class="py-2">
                   <div class="d-flex align-items-center">
@@ -195,7 +197,7 @@
                       <i class="tim-icons icon-vector"></i>
                     </div>
                     <div class="ml-3">
-                      <h6>Carefully crafted components</h6>
+                      <h6>Keamanan Dalam Pembayaran</h6>
                     </div>
                   </div>
                 </li>
@@ -205,7 +207,7 @@
                       <i class="tim-icons icon-tap-02"></i>
                     </div>
                     <div class="ml-3">
-                      <h6>Amazing page examples</h6>
+                      <h6>Desain Tampilan Menarik</h6>
                     </div>
                   </div>
                 </li>
@@ -215,7 +217,7 @@
                       <i class="tim-icons icon-single-02"></i>
                     </div>
                     <div class="ml-3">
-                      <h6>Super friendly support team</h6>
+                      <h6>Fitur Check-in Pengunjung</h6>
                     </div>
                   </div>
                 </li>
@@ -243,7 +245,7 @@
           <div class="col-md-4">
             <div class="card card-coin card-plain">
               <div class="card-header">
-                <img src="{{ asset('public/lp/img/homercat.png') }}" class="img-center img-fluid">
+                <img src="{{ asset('public/lp/img/ft_dio.jpg') }}" class="img-center img-fluid">
               </div>
               <div class="card-body">
                 <div class="row">
@@ -267,7 +269,7 @@
           <div class="col-md-4">
             <div class="card card-coin card-plain">
               <div class="card-header">
-                <img src="{{ asset('public/lp/img/skatetocat.png') }}" class="img-center img-fluid">
+                <img src="{{ asset('public/lp/img/ft_zaky.jpg') }}" class="img-center img-fluid">
               </div>
               <div class="card-body">
                 <div class="row">
@@ -281,7 +283,7 @@
                   <ul class="list-group">
                     <li class="list-group-item"></li>
                     <li class="list-group-item">Pemalang</li>
-                    <li class="list-group-item">ahmadzakyammar@gmail.com</li>
+                    <li class="list-group-item">ahmadzakyammardany7@gmail.com</li>
                     <li class="list-group-item">Politeknik Harapan Bersama</li>
                   </ul>
                 </div>
@@ -301,48 +303,27 @@
           </div>
           <div class="col-md-3">
             <ul class="nav">
+              
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  Home
+                <a href="https://evcamp.site/login" class="nav-link">
+                  Login
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  Landing
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="https://evcamp.site/register" class="nav-link">
                   Register
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  Profile
-                </a>
-              </li>
+              
             </ul>
           </div>
           <div class="col-md-3">
             <ul class="nav">
               <li class="nav-item">
                 <a href="#" class="nav-link">
-                  Contact Us
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  About Us
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  Blog
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  License
+                  Contact Us <br>
+                  Phone : 087737781051 <br>
+                  Email : admin@evcamp.site
                 </a>
               </li>
             </ul>
@@ -350,13 +331,13 @@
           <div class="col-md-3">
             <h3 class="title">Follow us:</h3>
             <div class="btn-wrapper profile">
-              <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+              <a target="_blank" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a target="_blank" href="https://www.facebook.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
+              <a target="_blank" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Like us">
                 <i class="fab fa-facebook-square"></i>
               </a>
-              <a target="_blank" href="https://dribbble.com/creativetim" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
+              <a target="_blank" class="btn btn-icon btn-neutral  btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
                 <i class="fab fa-dribbble"></i>
               </a>
             </div>

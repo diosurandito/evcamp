@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
-@include('templates.admin.partials._head')
+@include('templates.organizer.partials._head')
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+<div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-dark">
 
-   <!-- Header -->
-@include('templates.admin.partials._header')
-  <!-- End Header -->
+
   <!-- Sidebar -->
-  @include('templates.admin.partials._sidebar')
+  @include('templates.organizer.partials._sidebar')
   <!-- End Sidebar -->
+   <!-- Header -->
+  @include('templates.organizer.partials._header')
+  <!-- End Header -->
+
   <!-- Content  -->
-  <div class="content-wrapper">
-    <section class="content">
-        @yield('content')
-    </section>
-  </div>
+  
+  @yield('content')
+    
+ 
   <!-- End Content -->
 
   <!-- Footer -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      EVCAMP 2019
-    </div>
-    <strong>Copyright &copy; 2019 <a href="#">EVCAMP</a>.</strong> All rights reserved.
-  </footer>
-  <!-- End Footer -->
-  @include('templates.admin.partials._script')
+   <!-- Footer -->
+            <footer id="page-footer" class="bg-body-light">
+                <div class="content py-3">
+                    <div class="row font-size-sm">
+                        <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-right">
+                            <a class="font-w600" href="" target="_blank">EVCAMP</a> &copy; <span data-toggle="year-copy">2019</span>
+                        </div>
+                        <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-left">
+                            
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- END Footer -->
+</div>
+  @include('templates.organizer.partials._script')
  
 </body>
 </html>

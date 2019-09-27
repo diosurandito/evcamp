@@ -15,19 +15,21 @@ class CreateOrganizersTable extends Migration
     {
         Schema::create('organizers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nama', 100);
+            $table->string('nama', 250);
             $table->string('email', 100)->unique();
             $table->string('password',100);
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('nama_bank',200)->nullable();
+            $table->string('nama_akun',200)->nullable();
             $table->string('no_rek',30)->unique()->nullable();
             $table->string('no_telp',13)->unique()->nullable();
-            $table->string('nama_kampus',100);
-            $table->string('foto_ktm', 100)->nullable();
-            $table->string('foto_ktp', 100)->nullable();
-            $table->string('foto', 100)->nullable();
-            $table->boolean('deleted')->default(0);
+            $table->string('nama_kampus',200);
+            $table->string('foto_ktm', 200)->nullable();
+            $table->string('foto_ktp', 200)->nullable();
+            $table->string('foto', 200)->nullable()->default('foto/default.png');
             $table->rememberToken();
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
